@@ -40,17 +40,6 @@ bundles:
 
 Replace `<image>` with the URL or path to the bundle image. The prefix (e.g. `run://`) indicates the type of bundle being used.
 
-To install a bundle after installation instead (for bundles that are created to
-be used like that), use the following:
-
-```yaml
-#cloud-config
-install:
- bundles:
- - targets:
-   - run://<image>
-```
-
 Bundles have access to the Kairos cloud-config during their installation.
 This allows the user to add new blocks of configuration to configure the bundles.
 
@@ -81,7 +70,6 @@ metallb:
   version: 0.13.7
   address_pool: 192.168.1.10-192.168.1.20
 ```
-
 
 :::warning Warning
 
